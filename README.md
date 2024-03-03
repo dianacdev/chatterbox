@@ -1,5 +1,6 @@
 # ChatterBox
->Whisper wisely, Chatter safely with ChatterBox.
+
+> Whisper wisely, Chatter safely with ChatterBox.
 
 ## What is ChatterBox??
 
@@ -12,6 +13,7 @@ Chatterbox is a secure, encrypted chat application. Chatterbox allows users to s
 - Typescript
 - Toast
 - React.js
-- Database undecided
+- PlanetScale
+- Prisma
 
 Created By Diana Cervantes
