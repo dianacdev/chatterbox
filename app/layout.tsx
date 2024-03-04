@@ -26,8 +26,8 @@ export default function RootLayout({
           )}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system" //change dark to system once completed
-            enableSystem
+            defaultTheme="dark" //change dark to system once completed
+            enableSystem={false}
             storageKey="chatterbox-theme"
           >
             {children}
