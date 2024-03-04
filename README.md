@@ -13,7 +13,7 @@ Chatterbox is a secure, encrypted chat application. Chatterbox allows users to s
 - Typescript
 - Toast
 - React.js
-- PlanetScale
-- Prisma
+- PlanetScale with MySQL
+- Prisma (ORM)
 
 Created By Diana Cervantes
