@@ -11,9 +11,10 @@ Chatterbox is a secure, encrypted chat application. Chatterbox allows users to s
 - Next.js
 - TailwindCSS
 - Typescript
-- Toast
 - React.js
-- PlanetScale
-- Prisma
+- PlanetScale with MySQL
+- Prisma (ORM)
+- uploadthing (used to upload files)
+- axios
 
 Created By Diana Cervantes
