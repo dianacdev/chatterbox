@@ -45,7 +45,7 @@ const NavSidebar = async () => {
                     afterSignOutUrl="/"
                     appearance={{
                         elements:{
-                            avatarBox:"h-[48px] w-[48px]"
+                            avatarBox:"h-[48px] w-[48px] hover:scale-105 shadow-md"
                         }
                     }}
                 />
