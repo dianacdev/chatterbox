@@ -30,6 +30,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/hooks/use-modal-store";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -43,9 +44,10 @@ const formSchema = z.object({
 });
 
 export const CreateChannelModal = () => {
-  const {isOpen, onClose, type} = useModal();
+  const {isOpen, onClose, type, data} = useModal();
   const router = useRouter();
   const params = useParams()
+  const {channelType} = data
 
   const isModalOpen = isOpen && type === "createChannel"
 
@@ -53,11 +55,20 @@ export const CreateChannelModal = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      type: ChannelType.TEXT,
+      type: channelType || ChannelType.TEXT,
     },
   });
 
   const isLoading = form.formState.isSubmitting;
+
+  useEffect(()=>{
+    if(channelType){
+      form.setValue("type", channelType)
+    }
+    else{
+      form.setValue("type",ChannelType.TEXT)
+    }
+  },[channelType, form])
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
